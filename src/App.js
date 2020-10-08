@@ -1,17 +1,25 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import "./App.css";
+import Home from "./Component/Home/Home";
+import About from "./Component/About/About";
+import Header from "./Component/Header/Header";
+import Works from "./Component/Works/Works";
+import Contact from "./Component/Contact/Contact";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Typography fontFamily="Segoe UI Emoji" variant="h3" to="/">
-          material-ui分からん
-        </Typography>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/About" component={About} />
+          <Route path="/Works" component={Works} />
+          <Route path="/Contact" component={Contact} />
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
