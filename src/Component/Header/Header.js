@@ -6,7 +6,7 @@ import About from "../About/About";
 import Works from "../Works/Works";
 import Contact from "../Contact/Contact";
 
-import { makeStyles,createMuiTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
@@ -29,14 +29,18 @@ const useStyles = makeStyles((theme) => ({
     color: "inherit",
     marginRight: theme.spacing(3),
   },
+  AppBar: {
+    color: "#e0f2f1",
+    backgroundColor: "#212121"
+  }
 }));
 
-export default function ButtonAppBar() {
+function Header() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <AppBar style={{ color: "#e0f2f1", backgroundColor: "#212121" }}>
+      <AppBar className={classes.AppBar} position="sticky">
         <Toolbar>
           <Typography variant="h4" className={classes.title}>
             Vitamin Profile
@@ -65,3 +69,5 @@ export default function ButtonAppBar() {
     </div>
   );
 }
+
+export default Header;
