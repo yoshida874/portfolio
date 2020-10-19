@@ -1,15 +1,26 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+
 import "./Home.css";
+import backgroundImage from '../../images/Home.jpg';
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundImage: `url(${backgroundImage})`
+  },
+}));
 
 function Home() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <Typography fontFamily="Segoe UI Emoji" variant="h3" to="/">
-          material-ui分からん
-        </Typography>
-      </header>
+    <div className={classes.root}>
+      <div className="App">
+          <Typography fontFamily="Segoe UI Emoji" variant="h3" to="/">
+            material-ui分からん
+          </Typography>
+      </div>
     </div>
   );
 }
