@@ -8,7 +8,8 @@ import backgroundImage from '../../images/Home.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundImage: `url(${backgroundImage})`
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover'
   },
 }));
 
