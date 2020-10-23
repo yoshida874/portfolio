@@ -1,23 +1,31 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+import Divider from '@material-ui/core/Divider';
+
+import "./About.css";
+
 
 function About() {
   return (
-    <div className="App">
-        <Typography fontFamily="Segoe UI Emoji" variant="h4" to="/">
-          About
+      <Container className='App'>
+        <Typography variant="h3" to="/">
+          About<span className='mgr-10'>me</span>
         </Typography>
-        <table>
-          <tbody>
-            <tr>
-              <th>Github </th>
-              <td>
-                <a href="https://github.com/yoshida874">yoshida874</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
+        <Divider />
+        name:yoshida874
+        Birthday:1999-09-05<br/>
+        school:国際情報工科自動車大学校<br/>
+        <Typography  variant="h3" to="/">
+          Skill
+        </Typography>
+        <Divider />
+        Language<br/>
+        python javascript PHP java HTML+CSS more...
+        <br/>
+        Framework & Tool<br/>
+        Django React Node.js Git more...
+      </Container>
   );
 }
 
