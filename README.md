@@ -1,3 +1,2 @@
-# portfolio  
-ポートフォリオサイト  
+# Profile
 firebase + React
